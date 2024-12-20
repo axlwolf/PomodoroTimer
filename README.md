@@ -21,7 +21,7 @@ This project will help you gain experience with handling user input, conditional
 ### Get started
 
 ```
-  git clone https://github.com/axlwolf/rm-DatepickerUI.git my_project
+  git clone https://github.com/axlwolf/TemperatureConverter.git my_project
   cd my_project
   npm i
   npm start
