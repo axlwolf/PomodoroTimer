@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head itemscope itemtype="http://schema.org/WebSite">
+    <meta charset="utf-8"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+    <meta name="msapplication-tap-highlight" content="no"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <title>Roadmap Project: Temperature Converter</title>
+    <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+            integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+            crossorigin="anonymous"
+    />
+
+    <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
+
+    <meta name="author" content="Axel Lanuza"/>
+    <meta
+            name="keywords"
+            content="Roadmap Project, Build a temperature converter that converts between different units."
+    />
+    <meta
+            name="description"
+            content="Build a temperature converter that converts between different units."
+    />
+
+    <meta itemprop="name" content="Roadmap Project: Temperature Converter"/>
+    <meta
+            itemprop="description"
+            content="Build a temperature converter that converts between different units."
+    />
+    <link type="text/plain" rel="author" href="humans.txt"/>
+    <link rel="stylesheet" href="./css/app.css"/>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+<main role="main">
+    <section class="grid-layout">
+        <img
+                src="https://placehold.co/600x200/03122f/white?font=roboto&text=Temperature+Converter"
+                alt="Temperature Converter"
+        />
+    </section>
+    <div class="temperature-converter">
+        <form class="form" action="">
+            <fieldset>
+                <legend>
+                    <i class="fas fa-thermometer-half"></i> Enter the temperature,
+                    select units and submit
+                </legend>
+            </fieldset>
+            <div class="form-group">
+                <label for="temperature">
+                    <i class="fas fa-temperature-high"></i> Temperature
+                </label>
+                <input
+                        type="number"
+                        id="temperature"
+                        name="temperature"
+                        placeholder="Enter temperature"
+                        required/>
+            </div>
+            <div class="form-group">
+                <label for="from">
+                    <i class="fas fa-exchange-alt"></i> From
+                </label>
+                <select name="from" id="from">
+                    <option value="From Unit">From Unit</option>
+                    <option value="celsius">Celsius</option>
+                    <option value="fahrenheit">Fahrenheit</option>
+                    <option value="kelvin">Kelvin</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="to">
+                    <i class="fas fa-exchange-alt fa-rotate-90"></i> To
+                </label>
+                <select name="to" id="to">
+                    <option value="To Unit">To Unit</option>
+                    <option value="celsius">Celsius</option>
+                    <option value="fahrenheit">Fahrenheit</option>
+                    <option value="kelvin">Kelvin</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <button class="submit-btn" type="submit">
+                    <i class="fas fa-sync-alt"></i> Convert
+                </button>
+            </div>
+        </form>
+        <section class="result">
+            <p>
+                The result is: <span id="result">0</span>
+            </p>
+        </section>
+    </div>
+</main>
+
+<script type="module" src="../build/app.js"></script>
+</body>
+</html>
