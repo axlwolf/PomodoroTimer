@@ -1,22 +1,42 @@
-## Image Grid Layout
+## Pomodoro Timer
 
-Roadmap project link: https://roadmap.sh/projects/temperature-converter/solutions?u=64b1bc4d5f038d81eeb4b894
+Roadmap project link: https://roadmap.sh/projects/pomodoro-timer/solutions?u=64b1bc4d5f038d81eeb4b894
 
-Roadmap project: https://roadmap.sh/projects/temperature-converter
+Roadmap project: https://roadmap.sh/projects/pomodoro-timer
 
-Github link: https://github.com/axlwolf/TemperatureConverter
+Github link: https://github.com/axlwolf/PomodoroTimer
 
-Github pages link: https://axlwolf.github.io/TemperatureConverter/
+Github pages link: https://axlwolf.github.io/PomodoroTimer/
 
-This project is designed to help you practice DOM manipulation, form handling, and basic calculations in JavaScript.
+The goal of this project is to learn and practice frontend development skills by building a **Pomodoro Timer**, a productivity tool based on the Pomodoro Technique. The Pomodoro Technique is a time management method that uses a timer to break work into intervals (typically 25 minutes) separated by short breaks.
 
-You will create a temperature converter that allows users to enter a temperature value, select the unit they want to convert from, and select the unit they want to convert to. The "Convert" button should only be enabled when all three fields are filled in. Once the user clicks "Convert," the tool will display the converted temperature below the form.
+## Requirements
 
-Here is a mockup of what the temperature converter might look like:
+You will create a Pomodoro Timer web application using the frontend framework of your choice e.g. React, Vue or Angular. Here is the list of requirements for the application:
 
-[![Temperature Converter](https://assets.roadmap.sh/guest/temperature-converter-8omel.png)](https://assets.roadmap.sh/guest/temperature-converter-8omel.png)
+- User should be able to start stop and resume a pomodoro timer.
+- User should be able to configure the default interval configuration; default work session should be 25 minutes, short break should be 5 minutes and longer break after 4 work sessions should be 15 minutes.
+- Application should display the current session type (e.g., Work, Short Break, Long Break).
+- It should also track the number of tracked work sessions
+- Play a sound when a session ends to notify the user.
+- Ensure the app is accessible and visually appealing on both desktop and mobile devices.
 
-This project will help you gain experience with handling user input, conditionally enabling form elements, and performing simple calculations using JavaScript.
+You can use any existing pomodoro apps for the UI inspiration e.g.
+
+- [time.fyi - Pomodoro Timer](https://time.fyi/pomodoro)
+- [Pomofocus - Pomodoro Tracker](https://pomofocus.io/)
+
+## Technical Requirements
+
+- Use **HTML**, **CSS**, and **JavaScript** (or a frontend framework/library such as React, Vue, or Angular).
+- Implement state management for the timer and session tracking.
+- Use a modular and reusable code structure.
+- Maintain proper accessibility standards (e.g., keyboard navigation, ARIA labels).
+
+Feel free to deploy the application on [GitHub Pages](https://pages.github.com/), [Vercel](https://vercel.com/) or [Cloudflare pages](https://pages.cloudflare.com/)
+---
+
+By completing this project, you will enhance your frontend development skills while building a functional and customizable Pomodoro Timer application. This knowledge will prepare you for more advanced projects and improve your ability to create interactive and user-friendly web applications.ßßß
 
 ### Get started
 

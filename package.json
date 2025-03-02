@@ -1,7 +1,7 @@
 {
   "name": "temperature_converter",
   "version": "0.0.1",
-  "description": "Build a temperature converter that converts between different units.",
+  "description": "The goal of this project is to learn and practice frontend development skills by building a Pomodoro Timer, a productivity tool based on the Pomodoro Technique. The Pomodoro Technique is a time management method that uses a timer to break work into intervals (typically 25 minutes) separated by short breaks.",
   "main": "./src/index.js",
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack-dev-server --open --inline",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/axlwolf/TemperatureConverter.git"
+    "url": "git+https://github.com/axlwolf/PomodoroTimer.git"
   },
   "keywords": [],
   "author": "Axel Lanuza",

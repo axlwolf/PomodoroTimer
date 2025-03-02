@@ -1,3 +1,4 @@
+/* Variables de color del proyecto original */
 :root {
   --dark-blue: #03122f;
   --midnight-blue: #19305c;
@@ -11,163 +12,238 @@
   --blue: #c6e7ff;
   --beige: #ffddae;
 
-  /* Dark Mode Colors */
+  /* Mapeo para sistema de diseño */
+  --background: var(--white);
+  --foreground: var(--dark-blue);
+  --card: var(--white);
+  --card-foreground: var(--dark-blue);
+  --popover: var(--white);
+  --popover-foreground: var(--dark-blue);
+  --primary: var(--midnight-blue);
+  --primary-foreground: var(--white);
+  --secondary: var(--grey);
+  --secondary-foreground: var(--dark-purple);
+  --muted: var(--light-grey);
+  --muted-foreground: var(--dark-purple);
+  --accent: var(--pale-pink);
+  --accent-foreground: var(--dark-blue);
+  --destructive: var(--peach);
+  --destructive-foreground: var(--white);
+  --border: var(--light-grey);
+  --input: var(--light-grey);
+  --ring: var(--blue);
+  --radius: 0.5rem;
+}
+
+.dark {
   --dark-bg: #181818;
   --dark-card: #282828;
   --dark-text: #e0e0e0;
   --dark-border: #3a3a3a;
   --dark-button-bg: #373737;
   --dark-button-text: #ffffff;
+
+  /* Mapeo para sistema de diseño - modo oscuro */
+  --background: var(--dark-bg);
+  --foreground: var(--dark-text);
+  --card: var(--dark-card);
+  --card-foreground: var(--dark-text);
+  --popover: var(--dark-card);
+  --popover-foreground: var(--dark-text);
+  --primary: var(--midnight-blue);
+  --primary-foreground: var(--white);
+  --secondary: var(--dark-button-bg);
+  --secondary-foreground: var(--dark-button-text);
+  --muted: var(--dark-border);
+  --muted-foreground: var(--light-grey);
+  --accent: var(--dark-purple);
+  --accent-foreground: var(--white);
+  --destructive: var(--peach);
+  --destructive-foreground: var(--white);
+  --border: var(--dark-border);
+  --input: var(--dark-border);
+  --ring: var(--lavender);
+}
+
+/* Reseteo y estilos base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  font-family: 'Roboto', sans-serif; // Changed font to Roboto
-  background-color: var(--dark-blue); // Changed background to dark-blue
-  color: var(--pale-pink); // Changed text color to pale-pink
-  margin: 0;
-  padding: 20px;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: var(--background);
+  color: var(--foreground);
+  line-height: 1.5;
+}
+
+main {
   display: flex;
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
+  padding: 2rem;
 }
 
-/* Dark Mode Support (Media Query) */
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: var(--dark-bg);
-    color: var(--dark-text);
-  }
-}
-
+/* Estilos para el grid layout */
 .grid-layout {
-  text-align: center;
-  margin-bottom: 20px;
   width: 100%;
   max-width: 600px;
-  img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); // Added a more pronounced shadow
+  margin-bottom: 2rem;
+}
+
+.grid-layout img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Estilos para el Pomodoro Timer */
+.pomodoro-timer {
+  width: 100%;
+  max-width: 500px;
+}
+
+.pomodoro-timer__container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Estilos para los botones de acción */
+.action-buttons {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+.action-buttons__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius);
+  font-weight: 500;
+  font-size: 0.875rem;
+  height: 2.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  transition: all 150ms ease;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.action-buttons__button--start {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+  border: none;
+}
+
+.action-buttons__button--start:hover {
+  background-color: var(--midnight-blue);
+  filter: brightness(1.2);
+}
+
+.action-buttons__button--stop {
+  background-color: var(--destructive);
+  color: var(--destructive-foreground);
+  border: none;
+}
+
+.action-buttons__button--stop:hover {
+  background-color: var(--peach);
+  filter: brightness(1.1);
+}
+
+.action-buttons__button--reset,
+.action-buttons__button--shortbraek,
+.action-buttons__button--focus,
+.action-buttons__button--longbreak {
+  background-color: var(--secondary);
+  color: var(--secondary-foreground);
+  border: 1px solid var(--border);
+}
+
+.action-buttons__button--reset:hover,
+.action-buttons__button--shortbraek:hover,
+.action-buttons__button--focus:hover,
+.action-buttons__button--longbreak:hover {
+  background-color: var(--light-grey);
+  filter: brightness(1.05);
+}
+
+/* Estilos para el temporizador */
+.pomodoro-timer__timer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.pomodoro-timer__timer__time {
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+.pomodoro-timer__timer__progress {
+  width: 100%;
+  height: 0.5rem;
+  background-color: var(--secondary);
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.pomodoro-timer__timer__progress__bar {
+  height: 100%;
+  width: 0%;
+  background-color: var(--lavender);
+  border-radius: 9999px;
+  transition: width 1s linear;
+}
+
+/* Estilos para las opciones */
+.pomodoro-timer__options {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+/* Aplicación del modo oscuro */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: var(--dark-bg);
+    --foreground: var(--dark-text);
+    --card: var(--dark-card);
+    --card-foreground: var(--dark-text);
+    --border: var(--dark-border);
   }
 }
 
-.temperature-converter {
-  background-color: var(--midnight-blue); // Changed background to midnight-blue
-  padding: 30px; // Increased padding
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); // Added a more pronounced shadow
-  width: 100%;
-  max-width: 600px;
-
-  .form {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
-  fieldset {
-    width: 100%;
-    border: none;
-    padding: 0;
-    margin-bottom: 20px;
-
-    legend {
-      color: var(--peach); // Changed legend color to peach
-      font-size: 1.2rem;
-      font-weight: bold;
-      display: flex;
-      align-items: center;
-      .fas {
-        margin-right: 10px;
-      }
-    }
-  }
-
-  .form-group {
-    width: calc(50% - 10px); // Adjusted width for 2 columns with spacing
-    display: flex;
+/* Asegurarse de que los botones se vean bien en dispositivos móviles */
+@media (max-width: 640px) {
+  .action-buttons,
+  .pomodoro-timer__options {
     flex-direction: column;
-    margin-bottom: 20px;
-
-    &:nth-child(3){
-      width: 100%;
-    }
-    label {
-      margin-bottom: 5px;
-      color: var(--lavender); // Changed label color to lavender
-      display: flex;
-      align-items: center;
-      .fas {
-        margin-right: 10px;
-      }
-    }
-  }
-
-  input,
-  select {
     width: 100%;
-    padding: 10px;
-    border: 1px solid var(--dark-purple); // Changed border color to dark-purple
-    border-radius: 5px;
-    background-color: var(--dark-blue); // Changed background to dark-blue
-    color: var(--white); // Changed text color to white
-    font-size: 1rem;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-
-  }
-  select{
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ffffff'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E"); // White arrow
-    background-repeat: no-repeat;
-    background-position: right 10px center;
-    background-size: 15px;
   }
 
-  .submit-btn {
+  .action-buttons__button {
     width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: var(--peach); // Changed button background to peach
-    color: var(--white);
-    font-size: 1.1rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-
-    &:hover {
-      background-color: var(--beige); // Changed hover background to a lighter shade of peach
-      color: var(--midnight-blue);
-    }
-
-    .fas {
-      margin-right: 10px;
-    }
   }
-  .result {
-    margin-top: 20px;
-    font-size: 1.1rem;
-    color: var(--blue);
-    #result{
-      color: var(--white);
-      font-weight: bold;
-      font-size: 1.3rem;
-    }
-  }
-}
 
-@media (max-width: 768px) {
-  .form-group{
-    width: 100% !important;
-  }
-  .submit-btn {
-    .fas{
-      margin-right: 0;
-    }
+  .pomodoro-timer__timer__time {
+    font-size: 4rem;
   }
 }
